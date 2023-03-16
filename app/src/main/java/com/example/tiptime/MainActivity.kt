@@ -6,8 +6,6 @@ import com.example.tiptime.databinding.ActivityMainBinding
 import java.text.NumberFormat
 import kotlin.math.ceil
 
-//import kotlin.math.ceil
-
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +29,6 @@ class MainActivity : AppCompatActivity() {
             tip = ceil(tip)
         }
         val formattedTip = NumberFormat.getCurrencyInstance().format(tip)
-        binding.calculateButton.text = getString(R.string.tip_amount, formattedTip)
+        binding.tipResult.text = getString(R.string.tip_amount, formattedTip)
     }
-
 }
